@@ -1,17 +1,28 @@
 $(".priceTitle").click(function () {
+     $header = $(this);
+    $content = $header.next();
+    if($header.css('background-color') == 'rgb(214, 238, 242)') {
+                    $header.css('background-color','white');
+                    $content.css('background-color','rgb(214,238,242)');
+                }
+                else {
+                    $header.css('background-color','rgb(214,238,242)');
+                    $content.css('background-color','rgb(255,255,255)');
+                    
+                }
 
-    $header = $(this);
+
+
     //getting the next element
     $min = $header.children(':first-child');
-    $content = $header.next();
     //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
     $content.slideToggle(500, function () {
-        //execute this after slideToggle is done
-        //change text of header based on visibility of content div
-        $min.text(function () {
+                                    $min.text(function () {
             //change text based on condition
-            return $content.is(":visible") ? "+" : "-";
+            return $content.is(":visible") ? "-" : "+";
+            
         });
-    });
+                         
+                         });
 
 });
