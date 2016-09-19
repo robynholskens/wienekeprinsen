@@ -96,5 +96,9 @@ nav.navbar ul li.active a{
 
 /*Pricelist*/
 .row {
-    margin-top: 15vh;
+    margin-top: 25vh;
+}
+
+.content{
+    display: none;
 }
