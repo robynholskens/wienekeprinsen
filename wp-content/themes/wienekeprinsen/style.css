@@ -125,12 +125,15 @@ nav.navbar ul li.active a{
 	background: #deb6b6;
 }
 .callbackbuttons .bggrey{
-	background: #7a7a7a;
+	background: #939393;
 }
 h1.callbackbutton:before,
 h1.callbackbutton:after{
 	color: white;
 	content: " | ";
+}
+h1.callbackbutton{
+	color: white;
 }
 h1.callbackbutton a{
 	color: white;
@@ -171,7 +174,7 @@ h1.callbackbutton a:hover{
 
 /*call to action*/
 .call-to-action{
-	margin-top: 30px;
+	margin-top: 80px;
 	text-align: center;
 	font-size: 34px;
 	width: 100vw;
@@ -208,7 +211,7 @@ h1.callbackbutton a:hover{
 	width: 100%;
 }
 .abouttitle{
-	margin-top: -60px;
+	margin-top: 80px;
 }
 .abouttitle h1{
 	text-align: center;
@@ -222,7 +225,7 @@ h1.callbackbutton a:hover{
 /*end about section*/
 
 /*pricelist*/
-.container{
+.margin-top{
 	margin-top: 120px;
 }
 .price{
@@ -233,7 +236,6 @@ h1.callbackbutton a:hover{
     background-color: rgb(255,255,255);
     position: relative;
     overflow: visible;
-    height: 200px;
     overflow: auto;
     border-bottom: 15px solid rgb(214,238,242);
     border-top: 15px solid rgb(214,238,242);
@@ -259,54 +261,29 @@ h1.callbackbutton a:hover{
     margin-right: 20px;
     margin-left: 20px;
 }
-<<<<<<< HEAD
 .prices p {
     margin-left: 30px;
     margin-right: 30px;
     padding-bottom: 20px;
-=======
-
-.left{
-    
-    position: relative;
-    float:left;
-    padding-right: 20px;
 }
+/*end pricelist*/
 
-.right {
-        text-align: right;
-    position: absolute;
-    font-weight: 700;
-    width: 50px;
-    right: -50px;
-    top: 0;
->>>>>>> origin/master
-}
-/*end pricelisr*/
-
-<<<<<<< HEAD
 /*END FRONT PAGE*/
-=======
-.seperator {
-    position: relative;
-    display: table-cell;
-    content: " ";
-    width: 2000px;
-    height: 28px;
-    border-bottom: 1px solid #FFFFFF;
+
+/*FOOTER*/
+.footer{
+	padding-top: -60px;
+	text-align: center;
+	width: 100%;
+	background-color: #b4a3c7;
 }
-.content ul {
-padding: 10px 90px 10px 40px;
+.footer h1{
+	font-size: 24px;
+}
+.footer p{
+	font-size: 18px;
+	font-weight: 300;
+	color: white;
 }
 
-.content ul li{
-    position: relative;
-    line-height: 40px;
-    float:left;
-}
-
-.content ul li:before, .content ul li:after {
-    content: " ";
-    display: table;
-}
->>>>>>> origin/master
+/*END FOOTER*/

@@ -15,6 +15,7 @@ $(".priceTitle").click(function () {
      $min = $header.children(':first-child');
             $min.text(function () {
             //change text based on condition
+            return $content.is(":visible") ? "+" : "-";
             return $content.is(":visible") ? "-" : "+";
         });
 
@@ -23,6 +24,6 @@ $(".priceTitle").click(function () {
     //getting the next element
    
     //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
-    $content.slideToggle(500);
+    $content.slideToggle(400);
 
 });
