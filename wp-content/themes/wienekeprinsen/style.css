@@ -101,7 +101,13 @@ nav.navbar ul li.active a{
 .content{
     display: none;
     background-color: rgb(255,255,255);
-    padding-top:20px;
+    position: relative;
+    overflow: visible;
+    height: 200px;
+    overflow: auto;
+    border-bottom: 15px solid rgb(214,238,242);
+    border-top: 15px solid rgb(214,238,242);
+    box-sizing: border-box;
 }
 
 h2, h3{
@@ -116,6 +122,7 @@ padding-top: 15px;
     background-color: rgb(214,238,242);
     -webkit-transition: all 500ms ease;
     border: 1px solid white;
+    cursor: pointer;
 }
 
 .min {
@@ -126,15 +133,40 @@ padding-top: 15px;
 }
 
 .left{
+    
+    position: relative;
     float:left;
+    padding-right: 20px;
 }
 
 .right {
-    text-align:right;
+        text-align: right;
+    position: absolute;
+    font-weight: 700;
+    width: 50px;
+    right: -50px;
+    top: 0;
 }
 
+.seperator {
+    position: relative;
+    display: table-cell;
+    content: " ";
+    width: 2000px;
+    height: 28px;
+    border-bottom: 1px solid #FFFFFF;
+}
 .content ul {
-    margin-left:10px;
-    margin-right:50px;
-    padding-bottom: 20px;
+padding: 10px 90px 10px 40px;
+}
+
+.content ul li{
+    position: relative;
+    line-height: 40px;
+    float:left;
+}
+
+.content ul li:before, .content ul li:after {
+    content: " ";
+    display: table;
 }
