@@ -4,22 +4,20 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Wieneke Prinsen</title>
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <link rel="stylesheet" type="text/css" href="style.css">
+  <?php wp_head(); ?>
   </head>
   <body>
     <div class="container-fluid">
       <header>
-        <nav class="navbar navbar-fixed-top">
+        <nav class="navbar navbar-fixed-top" role="navigation">
           <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -33,7 +31,18 @@
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul class="nav navbar-nav navbar-right">
+            <?php 
+              /* Primary navigation */
+              wp_nav_menu( array(
+                'menu' => 'top_menu',
+                'depth' => 2,
+                'container' => false,
+                'menu_class' => 'nav',
+                //Process nav menu using our custom nav walker
+                'walker' => new wp_bootstrap_navwalker())
+              );
+            ?>
+              <!-- <ul class="nav navbar-nav navbar-right">
                 <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
                 <li><a href="#">Over Wieneke</a></li>
                 <li class="dropdown">
@@ -63,7 +72,7 @@
                 <li><a href="#">Cadeaubon</a></li>
                 <li><a href="#">Tarieven</a></li>
                 <li><a href="#">Contact</a></li>
-              </ul>
+              </ul> -->
               </div><!-- /.navbar-collapse -->
               </div><!-- /.container-fluid -->
             </nav>
@@ -123,7 +132,7 @@
                 </div>
               </div>
             </div>
-            <!-- <div class="row price">
+            <div class="row price">
               <div class="col-md-6 pricelist">
                 <div class="priceTitle"><span class="min">+</span> <h3>Reflexologie</h3></div>
                 <div class="prices">
@@ -153,7 +162,7 @@
                   </p>
                 </div>
               </div>
-            </div> -->
+            </div>
           </div>
           <div class="row footer">
             <div class="container">
@@ -179,11 +188,5 @@
               </div>
             </div>
           </div>
-        
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/main.js"></script>
       </body>
     </html>
